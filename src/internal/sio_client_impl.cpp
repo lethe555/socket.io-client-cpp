@@ -641,7 +641,7 @@ failed:
         m_client.set_tls_init_handler(&on_tls_init);
     }
 #endif
-    std::string client_impl::encode_query_string(const std::string &query){
+    std::string client_impl_base::encode_query_string(const std::string &query){
         ostringstream ss;
         ss << std::hex;
         // Percent-encode (RFC3986) non-alphanumeric characters.

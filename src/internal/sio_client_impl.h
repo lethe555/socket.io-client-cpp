@@ -98,6 +98,9 @@ namespace sio
         inline socket_void_fn socket_on_close() { return &sio::socket::on_close; }
         inline socket_void_fn socket_on_disconnect() { return &sio::socket::on_disconnect; }
         inline socket_void_fn socket_on_open() { return &sio::socket::on_open; }
+
+		// Percent encode query string
+		std::string encode_query_string(const std::string &query);
     };
 
     template<typename client_type>
