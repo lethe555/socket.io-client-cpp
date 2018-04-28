@@ -45,7 +45,8 @@ namespace sio
     typedef websocketpp::client<client_config_tls> client_type_tls;
 #endif
 
-    struct client_impl_base {
+    class client_impl_base {
+	public:
         enum con_state
         {
             con_opening,
